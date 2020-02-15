@@ -1,0 +1,150 @@
+body{
+    text-align: center;
+}
+.hard_cell_mine{
+    position: relative;
+    height: 25px;
+    
+    top: 5px;
+}
+.lost{
+    font-size: 40px;
+    color: red;
+}
+.won{
+        font-size: 40px;
+        color:green;
+    
+}
+.flag{
+    font-size: larger;
+    color: white;
+    margin-bottom:30px ;
+}
+.mine{
+    position: relative;
+    height: 30px;
+    
+    top: 6.5px;
+}
+.heading{
+    margin-left: auto;
+    margin-right: auto;
+    color: aliceblue;
+    font-size: 45px;
+    font-family: monospace;
+    letter-spacing: 10px;
+}
+.easy, .medium, .hard{
+    margin-left: 20px;
+    margin-right: 20px;
+    height:50px;
+    padding:0px 20px;
+    border-radius: 100px;
+    border:none;
+    color: white;
+    transform: scale(1);
+    transition: 0.1s;
+
+
+}
+.easy:hover,.medium:hover, .hard:hover{
+    cursor: pointer;
+    transition: ease-out;
+    transform: scale(1.06);
+    transition: 0.1s;
+}
+.options{
+    position: relative;
+    margin:auto;
+}
+.easy{
+    background-color: rgb(151, 151, 151);
+}
+.medium{
+    background-color: rgb(63, 63, 63);
+}
+.hard{
+    background-color: rgb(0, 0, 0);
+}
+.hard_cell_board{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 940px;
+    
+    color: aliceblue;
+    padding:20px;
+    white-space: normal;
+
+}
+.medium_cell_board{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 790px;
+    
+    color: aliceblue;
+    padding:20px;
+    white-space: normal;
+
+}
+.easy_cell_board{
+    
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 500px;
+    color: aliceblue;
+    padding:20px;
+    white-space: normal;
+
+}
+.easy_cell{
+    float: left;
+    border-radius: 5px;
+    height:50px;
+    width: 50px;
+    margin: 2px 2px 0px 2px;
+    background-color:black;
+    font-size: 25px;
+    line-height: 45px;
+    
+    
+
+}
+.hard_cell{
+    float: left;
+    border-radius: 5px;
+    height:35px;
+    width: 35px;
+    margin: 2px 2px 0px 2px;
+    background-color: black;
+    font-size: 20px;
+    line-height: 35px;
+    
+    
+
+}
+.medium_cell{
+    float: left;
+    border-radius: 5px;
+    height:43px;
+    width: 43px;
+    margin: 2px 2px 0px 2px;
+    background-color: black;
+    font-size: 25px;
+    line-height: 40px;
+    
+    
+
+}
+.easy_cell:hover, .hard_cell:hover, .medium_cell:hover{
+    cursor :pointer;
+}
+.revealed{
+    color: black;
+    background-color: white;
+}
