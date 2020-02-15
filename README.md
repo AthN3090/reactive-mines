@@ -8,7 +8,7 @@ Implementation of the classic minesweeper game in reactJs with simple minimal UI
 ```
 npm install
 ```
-3. Finally, run the command to run the project locally:
+3. Finally, run the below command to run the project locally:
 ```
 npm start
 ```
