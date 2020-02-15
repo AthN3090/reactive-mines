@@ -1,6 +1,6 @@
 # Reactive-mines
 
-Implementation of the classic minesweeper game in reactjs with simple minimal UI.
+Implementation of the classic minesweeper game in reactJs with simple minimal UI.
 
 ### How to run the project
 1. Clone the repo in your suitable directory
