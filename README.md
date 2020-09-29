@@ -2,6 +2,8 @@
 
 Implementation of the classic minesweeper game in reactJs with simple minimal UI.
 
+![demo](/Screenshots/demo.gif)
+
 ### How to run the project
 1. Clone the repo in your suitable directory
 2. Open terminal from that directory and run the following command to install the required dependencies :
