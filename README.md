@@ -2,7 +2,7 @@
 
 Implementation of the classic minesweeper game in reactJs with simple minimal UI.
 
-<center><img src="https://github.com/AthN3090/reactive-mines/Screenshots/demo.gif"></center>
+<center><img src="https://github.com/AthN3090/reactive-mines/blob/master/Screenshots/demo.gif"></center>
 
 ### How to run the project
 1. Clone the repo in your suitable directory
