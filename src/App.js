@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import mine from './mine.png';
 class Header extends React.Component{
   render(){
     return (<h1 className="heading">
@@ -28,14 +27,14 @@ class Cell extends React.Component{
      const value = this.props.value;
       if(value.revealed){
         if(value.mine)
-         return <img className={this.props.level === "hard_cell"?this.props.level + "_mine":"mine"} alt="mine" src={mine}/>
+         return <span role="img" aria-label="bomb">💣</span>;
         else {
           if(value.touching_mine !== 0)
             return value.touching_mine;
           else return;
           }
       }else if(value.flagged)
-        return "🚩";
+        return <span role="img" aria-label="flag">🚩</span>;
         if(!value.flagged)
         return;
         
@@ -140,6 +139,7 @@ class DrawBoard extends React.Component{
       if(data[i][j].mine === false){
         var mine_count = 0;
         const neighbours = this.check_touching(i,j,data);
+        // eslint-disable-next-line
         neighbours.map(value =>{
           if(value.mine)
             mine_count+=1;
@@ -156,7 +156,7 @@ class DrawBoard extends React.Component{
   
  revealEmpty(i, j, data){
       var neighbours = this.check_touching(i,j,data);
-        
+        // eslint-disable-next-line
       neighbours.map( value => {
         if(!value.revealed && !value.mine && !value.flagged){
           data[value.x_position][value.y_position].revealed = true;
@@ -172,8 +172,8 @@ class DrawBoard extends React.Component{
   }
   
   revealAll(data){
-
-      data.map((row) =>{
+// eslint-disable-next-line
+      data.map((row) =>{// eslint-disable-next-line
         row.map((cols)=>{
           cols.revealed = true;
           })
@@ -244,13 +244,13 @@ rightclick(e,x_position, y_position, data){
       mines++;
       }
     
+    } this.setState({
       
-} this.setState({
-    boardData:data,
-    flags:flags,
-    mines:mines
+  flags:flags,
+  boardData:data,
+  mines:mines
   },()=>{
-    console.log(this.state.mines);
+    console.log(this.state.flags);
     if(this.state.mines=== 0){
       this.setState({
         player_status:"won"
@@ -284,7 +284,7 @@ rendercells(){
   render(){
    
     return <div className={this.state.type+"_board"}>
-              {this.state.game_status === "running" ? <div className="flag">Flags🚩: {this.state.mines}</div>: <div className={this.state.player_status === "Lost" ? "lost":"won"}> You {this.state.player_status} !</div>}
+              {this.state.game_status === "running" ?<div className="flag">Flags <span role="img" aria-label='flag'>🚩</span>: {this.state.flags} </div>: <div className={this.state.player_status === "Lost" ? "lost":"won"}> You {this.state.player_status} !</div>}
               {
                 this.rendercells()
               }
